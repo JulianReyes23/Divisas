@@ -1,0 +1,65 @@
+def divisas():
+    print('Bienvenido al sistema de conversion de divisas')
+    opcion=int(input('''Selecione la divisa a Convertir
+        1. COP 
+        2. Dolar
+        3. Euro
+        4. Libra\n'''))
+    if opcion==1:
+        print('COP')
+        opcion1=int(input('''Selecione a que divisa desea convertir
+        1. Dolar
+        2. Euro
+        3. Libra'''))
+        if opcion1==1:
+            from COPaDolar import conversion
+        elif opcion1==2:
+            from COPaEuro import conversion
+        elif opcion1==3:
+            from COPalibra import conversion
+        else:
+            print('la opcion ingresada no es valida vuelva a intentarlo')
+            exit
+    elif opcion==2:
+        print('DOLAR')
+        opcion2=int(input('''Selecione a que divisa desea convertir
+        1. COP 
+        2. Euro
+        3. Libra'''))
+        if opcion2==1:
+            from DolaraCOP import conversion
+        elif opcion2==2:
+            from DolaraEuro import conversion
+        elif opcion2==3:
+            from DolaraLibra import conversion
+        else:
+            print('la opcion ingresada no es valida vuelva a intentarlo')
+            exit   
+    elif opcion==3:
+        print('EURO')
+        opcion3=int(input('''Selecione a que divisa desea convertir
+        1. COP 
+        2. Dolar
+        3. Libra'''))
+        if opcion3==1:
+            from EuroaCOP import conversion
+        elif opcion3==2:
+            from EuroaDolar import conversion
+        elif opcion3==3:
+            from EuroaLibra import conversion
+    elif opcion==4:
+        print('Libra')
+        opcion4=int(input('''Selecione a que divisa desea convertir
+        1. COP 
+        2. Dolar
+        3. Euro'''))
+        if opcion4==1:
+            from LibraaCOP import conversion
+        elif opcion4==2:
+            from LibraaDolar import conversion
+        elif opcion4==3:
+            from LibraaEuro import conversion
+        else:
+            print('la opcion ingresada no es valida vuelva a intentarlo')
+            exit
+divisas()
